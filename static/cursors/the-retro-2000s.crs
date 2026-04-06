@@ -1,0 +1,48 @@
+﻿[UpArrow]
+Path=Black White Alternate Select.cur
+
+[Wait]
+Path=Black White Busy.cur
+
+[SizeNWSE]
+Path=Black White Diagonal Resize 1.cur
+
+[SizeNESW]
+Path=Black White Diagonal Resize 2.cur
+
+[NWPen]
+Path=Black White Handwriting.cur
+
+[SizeWE]
+Path=Black White Horizontal Resize.cur
+
+[SizeAll]
+Path=Black White Move.cur
+
+[Crosshair]
+Path=Black White Precision Select.cur
+
+[SizeNS]
+Path=Black White Vertical Resize.cur
+
+[IBeam]
+Path=cursor (1).cur
+
+[AppStarting]
+Path=cursor (10).cur
+
+[Pin]
+Path=cursor (5).cur
+
+[Person]
+Path=cursor (6).cur
+
+[Arrow]
+Path=cursor (8).cur
+
+[Help]
+Path=cursor (9).cur
+
+[Hand]
+Path=cursor.cur
+

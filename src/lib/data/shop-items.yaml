@@ -1,0 +1,53 @@
+- img: https://placehold.co/640x640/ffffff/0d3dff?text=??
+  name: Stickers
+  desc: cool custom resolution hardware stickers
+  price: 1
+  locked: false
+
+- img: https://cdn.hackclub.com/019d6084-3aac-7b88-97c3-237a689e912e/hotplate.png
+  name: Hot Plate
+  desc: for cooking pcbs
+  price: 25
+  locked: false
+
+- img: https://cdn.hackclub.com/019d60d6-44e1-7a23-80c8-ed2768d6e8ab/multimeter.png
+  name: Multimeter
+  desc: to measure stuff
+  price: 90
+  locked: true
+
+- img: https://cdn.hackclub.com/019d60d6-3db0-7519-a1fe-12c32b2fbf42/heat%20gun.png
+  name: Heat Gun
+  desc: to heat stuff up
+  price: 90
+  locked: true
+
+- img: https://placehold.co/640x640/ffffff/0d3dff?text=Random%20PCB
+  name: Random PCB
+  desc: a random pcb from rudy's pcb stash
+  price: 90
+  locked: true
+
+- img: https://cdn.hackclub.com/019d60d6-3100-7284-a524-ed67ca7bb8d4/bench%20PSU.png
+  name: Bench Power Supply
+  desc: to power stuff
+  price: 90
+  locked: true
+
+- img: https://cdn.hackclub.com/019d6084-1220-747d-8837-5a463b113ba9/orpheus_pico%201.png
+  name: Raspberry Pi Pico
+  desc: maybe an orpheus pico!?
+  price: 90
+  locked: true
+
+- img: https://cdn.hackclub.com/019d6084-725d-77b7-b366-989371e5a883/ducky.png
+  name: PicoDucky
+  desc: a hackable security key
+  price: 90
+  locked: true
+
+- img: https://cdn.hackclub.com/019d6083-660c-714f-a049-cbbde3a2de76/pinecil.png
+  name: Pinecil
+  desc: to solder stuff
+  price: 90
+  locked: true

@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'Dreamer TM';
+  src: url('/fonts/DreamerTM-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('/fonts/DepartureMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --brand-blue: #0d3dff;
+  --bg: #ffffff;
+  --cursor-default: url('/cursors/cursor%20(8).cur'), auto;
+  --cursor-pointer: url('/cursors/cursor.cur'), pointer;
+  --cursor-text: url('/cursors/Black%20White%20Handwriting.cur'), text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--brand-blue);
+  cursor: var(--cursor-default);
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Dreamer TM', 'Trebuchet MS', sans-serif;
+}
+
+body * {
+  cursor: inherit;
+}
+
+button,
+a,
+[role='button'] {
+  cursor: var(--cursor-pointer);
+}
+
+input,
+textarea,
+[contenteditable='true'] {
+  cursor: var(--cursor-text);
+}
+
+.shop-page {
+  width: min(99%, 100%);
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+}
+
+.shop-header h1 {
+  margin: 0;
+  font-size: clamp(4rem, 5vw, 10rem);
+  font-weight: 100;
+}
+
+.top-divider {
+  height: 4px;
+  background: var(--brand-blue);
+  margin-top: 16px;
+  width: 100%;
+}
+
+.cards-grid {
+  margin-top: 28px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  font-family: "Departure Mono";
+}
+
+.item-card {
+  border: 3px solid var(--brand-blue);
+  background: var(--bg);
+  position: relative;
+  overflow: hidden;
+  transform-origin: center;
+  transition: transform 170ms ease;
+}
+
+.item-card:hover,
+.item-card:focus-within {
+  transform: translateY(-2px) scale(1.01) rotate(-0.35deg);
+}
+
+.item-image-wrap {
+  padding: 10px;
+  aspect-ratio: 1 / 1;
+}
+
+.item-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-divider {
+  height: 2px;
+  background: var(--brand-blue);
+}
+
+.item-copy {
+  padding: 12px;
+  min-height: 98px;
+}
+
+.item-copy h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.item-copy p {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.item-price-row {
+  padding: 10px 12px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: var(--brand-blue);
+  color: var(--bg);
+  border: 0;
+  width: 100%;
+  cursor: var(--cursor-pointer);
+  text-align: left;
+  font: inherit;
+  transition: opacity 140ms ease;
+}
+
+.item-price-row * {
+  cursor: inherit;
+}
+
+
+.price-label {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.item-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.locked-chip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 2px solid var(--brand-blue);
+  background: var(--bg);
+  padding: 4px 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.item-card.is-pulsing {
+  animation: buy-pulse 260ms ease-out;
+}
+
+.item-card.is-shaking {
+  animation: lock-shake 330ms cubic-bezier(0.32, 0.72, 0.2, 1);
+}
+
+@keyframes buy-pulse {
+  0% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.14);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes lock-shake {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateX(-3px) rotate(-0.8deg);
+  }
+
+  50% {
+    transform: translateX(3px) rotate(0.8deg);
+  }
+
+  75% {
+    transform: translateX(-2px) rotate(-0.6deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+.shop-footer {
+  margin-top: 34px;
+  border-top: 2px solid var(--brand-blue);
+  padding-top: 12px;
+  font-family: "Departure Mono";
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.shop-footer p {
+  margin: 0;
+}
+
+.shop-footer a {
+  color: inherit;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .shop-page {
+    padding-top: 20px;
+  }
+
+  .cards-grid {
+    gap: 16px;
+  }
+}
