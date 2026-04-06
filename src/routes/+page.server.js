@@ -1,11 +1,8 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
 import { parse } from 'yaml';
+import yamlRaw from '$lib/data/shop-items.yaml?raw';
 
 /** @returns {Promise<{ items: Array<{ img: string, name: string, desc: string, price: number, locked: boolean }> }>} */
 export async function load() {
-  const yamlPath = path.join(process.cwd(), 'src', 'lib', 'data', 'shop-items.yaml');
-  const yamlRaw = await fs.readFile(yamlPath, 'utf8');
   const parsed = parse(yamlRaw);
 
   const items = Array.isArray(parsed)
